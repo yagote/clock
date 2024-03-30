@@ -5,29 +5,31 @@
     <meta charset="UTF-8">
     <title>桌面时钟</title>
     <style>
-         #container {
-      text-align: center;
-      position: relative;
-    }
-    #date {
-      position: absolute;
-      font-size: 14px;
-      color: #ffffff;
-      bottom: 0;
-      right: 0;
-    }
-    #time {
-      font-size: 48px;
-      color: #ffffff;
-      font-weight: bold;
-    }
+        #container {
+            text-align: center;
+            position: relative;
+        }
+
+        #date {
+            position: absolute;
+            font-size: 14px;
+            color: #ffffff;
+            bottom: 0;
+            right: 0;
+        }
+
+        #time {
+            font-size: 48px;
+            color: #ffffff;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
 
-        <div id="time"></div>
-        <div id="date"></div>
+    <div id="time"></div>
+    <div id="date"></div>
 
     <script>
         async function fetchTime() {
