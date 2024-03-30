@@ -21,23 +21,6 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.3.1",
     "electron": "^29.1.6"
   },
-  "build": {
-    "appId": "com.yagote.clock",
-    "productName": "clock",
-    "win": {
-      "target": "nsis",
-      "icon": "assets/icon.ico"
-    },
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "dist/**/*",
-      "index.html",
-      "main.js",
-      "package.json"
-    ]
-  },
   "dependencies": {
     "@electron-forge/plugin-fuses": "^7.3.1",
     "electron-squirrel-startup": "^1.0.0"
