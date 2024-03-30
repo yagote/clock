@@ -11,8 +11,24 @@
   "author": "yagote",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.30",
     "electron": "^29.1.6",
-    "typescript": "^5.4.3"
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.yagote.clock",
+    "productName": "clock",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist/**/*",
+      "index.html",
+      "main.js",
+      "package.json"
+    ]
   }
 }
