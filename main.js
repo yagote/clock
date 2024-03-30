@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+const path = require('path');
 
 function createWindow () {
   // 创建浏览器窗口
@@ -9,6 +10,7 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true
     },
+    icon: path.join(__dirname, 'assets/icon.png'), // 设置窗口图标
     alwaysOnTop: true, // 将窗口设置为始终置顶
   });
 
