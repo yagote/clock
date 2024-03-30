@@ -6,13 +6,15 @@
     <title>桌面时钟</title>
     <style>
         body {
-          color: #cccccc; /* 设置文本颜色为灰白色 */
-          background-color: #000000; /* 背景色设置为黑色 */
+            color: #cccccc;
+            /* 设置文本颜色为灰白色 */
+            background-color: #000000;
+            /* 背景色设置为黑色 */
         }
-      </style>
+    </style>
 </head>
 
-<body>
+<!-- <body>
     <p id="time">加载中……</p>
     <script>
         async function fetchTime() {
@@ -38,5 +40,36 @@
     </script>
 
 </body>
+ -->
 
-</html>
+ <body>
+    <div id="date"></div>
+    <div id="time"></div>
+    <script>
+      async function fetchTime() {
+        try {
+          const response = await fetch('https://api.uuni.cn/api/time');
+          if (!response.ok) {
+            throw new Error('Network Error!');
+          }
+          const data = await response.json();
+          // 提取日期时间
+          const dateTime = data.date.split(' '); // 将日期时间字符串拆分为日期和时间
+          const date = dateTime[0]; // 获取日期
+          const time = dateTime[1]; // 获取时间
+          const weekday = data.weekday; // 获取星期
+          // 显示日期时间
+          document.getElementById('date').innerText = date;
+          document.getElementById('time').innerText = time;
+        } catch (error) {
+          console.error('Fetch time failed:', error);
+          document.getElementById('date').innerText = 'Failed to load time';
+          document.getElementById('time').innerText = 'Failed to load time';
+        }
+      }
+  
+      fetchTime();
+      setInterval(fetchTime, 1000); // 每1秒刷新时间
+    </script>
+  </body>
+ </html>

@@ -10,7 +10,7 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true
     },
-    icon: path.join(__dirname, 'assets/icon.png'), // 设置窗口图标
+    icon: path.join(__dirname, 'assets/icon.ico'), // 设置窗口图标
     alwaysOnTop: true, // 将窗口设置为始终置顶
   });
 
