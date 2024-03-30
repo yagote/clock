@@ -4,8 +4,8 @@ const path = require('path');
 function createWindow () {
   // 创建浏览器窗口
   const win = new BrowserWindow({
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 130,
     backgroundColor: '#000000',
     webPreferences: {
       nodeIntegration: true
