@@ -10,7 +10,7 @@
     "make": "electron-forge make"
   },
   "keywords": [],
-  "author": "yagote",
+  "author": "https://github.com/yagote",
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/cli": "^7.3.1",
