@@ -11,6 +11,9 @@ function createWindow () {
     }
   });
 
+ // 去掉顶部的默认菜单
+ win.setMenu(null);
+
   // 加载index.html文件
   win.loadFile('index.html');
 }
